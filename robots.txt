@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://saihospital.com/sitemap.xml
+Sitemap: https://saiweb-62d38.web.app/sitemap.xml
 
 # Block access to admin areas
 Disallow: /admin/

@@ -1,33 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://saihospital.com/</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://saihospital.com/services</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://saihospital.com/doctors</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://saihospital.com/departments</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://saihospital.com/contact</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://saiweb-62d38.web.app/</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/index.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/about.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/services.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/laboratory.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/digital-xray.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/emergency.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/gallery.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/brochure.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/facilities.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/facilities-overview.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/patient-info.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/visitors.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/international-patients.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/outpatient.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/careers.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/doctors.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/info.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/contact.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/appointments.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/robotic-knee-replacement.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/neurology.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/episurf.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/cardiology.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/plastic-surgery.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/general-medicine.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/general-surgery.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/cardiothoracic-surgery.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/orthopedics.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/physio-therapy.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/ent.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/pulmonology.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/critical-care.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/dental-care.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/vascular-surgery.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/bariatric-surgery.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saiweb-62d38.web.app/emergency-services.html</loc>
+  <lastmod>2025-01-03T08:33:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>

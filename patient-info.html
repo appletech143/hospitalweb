@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information - SAI Hospital</title>
+    <meta name="description" content="Important information for patients at SAI Hospital. Learn about admission procedures, visiting hours, and hospital policies.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .patient-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .patient-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)),
+                        url('images/patient-info-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .info-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: #f7fafc;
+            border: none;
+            border-radius: 5px;
+            color: #2c5282;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background: #48bb78;
+            color: white;
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .info-card h2 {
+            color: #2c5282;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card h2 i {
+            color: #48bb78;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            margin: 15px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .info-list li:before {
+            content: "•";
+            color: #48bb78;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .visiting-hours {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .visiting-hours h3 {
+            color: #2c5282;
+            margin-bottom: 15px;
+        }
+
+        .hours-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .hours-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .hours-item h4 {
+            color: #48bb78;
+            margin-bottom: 10px;
+        }
+
+        .contact-box {
+            background: #2c5282;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            color: #48bb78;
+        }
+
+        .faq-section {
+            margin-top: 60px;
+            display: none;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #2c5282;
+            font-weight: 500;
+        }
+
+        .faq-answer {
+            padding: 15px;
+            color: #4a5568;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .patient-section {
+                padding: 80px 15px 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Patient Information Section -->
+    <section class="patient-section">
+        <div class="patient-content">
+            <div class="hero-section">
+                <h1>Patient Information</h1>
+                <p>Everything you need to know about your stay at SAI Hospital</p>
+            </div>
+
+            <div class="info-tabs">
+                <button class="tab-btn active">Admission</button>
+                <button class="tab-btn">Visiting Hours</button>
+                <button class="tab-btn">Insurance</button>
+                <button class="tab-btn">Facilities</button>
+                <button class="tab-btn">FAQs</button>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-clipboard-list"></i> Admission Process</h2>
+                <ul class="info-list">
+                    <li>Bring valid photo identification and insurance card</li>
+                    <li>Complete admission forms (available online or at reception)</li>
+                    <li>Provide medical history and current medications list</li>
+                    <li>Arrange for payment or insurance verification</li>
+                    <li>Receive room assignment and hospital orientation</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-clock"></i> Visiting Hours</h2>
+                <div class="visiting-hours">
+                    <h3>General Ward Timings</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <h4>Morning Hours</h4>
+                            <p>10:00 AM - 12:00 PM</p>
+                        </div>
+                        <div class="hours-item">
+                            <h4>Evening Hours</h4>
+                            <p>4:00 PM - 7:00 PM</p>
+                        </div>
+                        <div class="hours-item">
+                            <h4>ICU Hours</h4>
+                            <p>11:00 AM - 12:00 PM</p>
+                            <p>5:00 PM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-file-medical"></i> Insurance & Billing</h2>
+                <ul class="info-list">
+                    <li>We accept most major insurance providers</li>
+                    <li>Pre-authorization required for certain procedures</li>
+                    <li>Billing department available Mon-Fri, 9 AM - 5 PM</li>
+                    <li>Various payment options including EMI available</li>
+                    <li>Financial counseling services provided</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-hospital"></i> Facilities</h2>
+                <ul class="info-list">
+                    <li>24/7 Emergency Services</li>
+                    <li>State-of-the-art Laboratory & CT</li>
+                    <li>Digital X-Ray facilities</li>
+                    <li>Well-equipped ICU & CCU</li>
+                    <li>Pharmacy & Medical Store</li>
+                </ul>
+            </div>
+
+            <div class="contact-box">
+                <h3>Need Assistance?</h3>
+                <p>Our patient support team is here to help you 24/7</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0883-2472083</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>patient@saihospital.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-comment-medical"></i>
+                        <span>Live Chat Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What items should I bring for admission?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Bring comfortable clothing, toiletries, any current medications, insurance card, and identification documents. Avoid bringing valuables to the hospital.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I get my medical records?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Submit a request to our medical records department with valid ID. Processing typically takes 3-5 business days. Records can be collected in person or sent securely via email.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What are the parking facilities?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We provide free parking for patients and visitors in our designated parking area. Valet parking is available at the main entrance for a nominal fee.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const infoCards = document.querySelectorAll('.info-card');
+            const faqSection = document.querySelector('.faq-section');
+
+            tabBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    // Hide all content sections
+                    infoCards.forEach(card => card.style.display = 'none');
+                    faqSection.style.display = 'none';
+
+                    // Show relevant content based on button clicked
+                    switch(index) {
+                        case 0: // Admission
+                            infoCards[0].style.display = 'block';
+                            break;
+                        case 1: // Visiting Hours
+                            infoCards[1].style.display = 'block';
+                            break;
+                        case 2: // Insurance
+                            infoCards[2].style.display = 'block';
+                            break;
+                        case 3: // Facilities
+                            infoCards[3].style.display = 'block';
+                            break;
+                        case 4: // FAQs
+                            faqSection.style.display = 'block';
+                            break;
+                    }
+                });
+            });
+
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('active');
+                    
+                    // Toggle icon
+                    if (answer.classList.contains('active')) {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

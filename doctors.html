@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - SAI Hospital</title>
+    <meta name="description" content="Meet our experienced team of doctors at SAI Hospital. Specialists dedicated to providing exceptional healthcare services.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .doctors-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .doctors-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)),
+                        url('images/doctors-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .departments-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .department-btn {
+            padding: 10px 20px;
+            background: #f7fafc;
+            border: none;
+            border-radius: 5px;
+            color: #2c5282;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .department-btn:hover,
+        .department-btn.active {
+            background: #48bb78;
+            color: white;
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .doctor-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doctor-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .doctor-info {
+            padding: 20px;
+        }
+
+        .doctor-info h3 {
+            color: #2c5282;
+            margin-bottom: 5px;
+        }
+
+        .doctor-specialty {
+            color: #48bb78;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .doctor-details {
+            color: #4a5568;
+            margin: 15px 0;
+        }
+
+        .doctor-schedule {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .doctor-schedule h4 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .schedule-list li {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            color: #4a5568;
+        }
+
+        .doctor-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .book-btn {
+            background: #48bb78;
+            color: white;
+        }
+
+        .book-btn:hover {
+            background: #38a169;
+        }
+
+        .profile-btn {
+            background: #2c5282;
+            color: white;
+        }
+
+        .profile-btn:hover {
+            background: #1a365d;
+        }
+
+        .specialization-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .specialization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .specialization-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .specialization-item i {
+            color: #48bb78;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .doctors-section {
+                padding: 80px 15px 20px;
+            }
+
+            .doctors-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .doctor-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Doctors Section -->
+    <section class="doctors-section">
+        <div class="doctors-content">
+            <div class="hero-section">
+                <h1>Our Medical Team</h1>
+                <p>Meet our experienced and dedicated healthcare professionals</p>
+            </div>
+
+            <div class="departments-nav">
+                <button class="department-btn active">All Departments</button>
+                <button class="department-btn">General Medicine</button>
+                <button class="department-btn">Cardiology</button>
+                <button class="department-btn">Orthopedics</button>
+                <button class="department-btn">Pediatrics</button>
+                <button class="department-btn">Gynecology</button>
+            </div>
+
+            <div class="doctors-grid">
+                <div class="doctor-card" data-department="Cardiology">
+                    <img src="images/doctor1.jpg" alt="Dr. John Smith" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3>Dr. John Smith</h3>
+                        <div class="doctor-specialty">Cardiologist</div>
+                        <div class="doctor-details">
+                            <p>MBBS, MD (Cardiology)</p>
+                            <p>15+ years experience</p>
+                        </div>
+                        <div class="doctor-schedule">
+                            <h4>Consultation Hours</h4>
+                            <ul class="schedule-list">
+                                <li><span>Mon - Fri:</span> <span>9:00 AM - 5:00 PM</span></li>
+                                <li><span>Saturday:</span> <span>9:00 AM - 1:00 PM</span></li>
+                            </ul>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="action-btn book-btn">Book Appointment</a>
+                            <a href="#" class="action-btn profile-btn">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-department="Pediatrics">
+                    <img src="images/doctor2.jpg" alt="Dr. Sarah Johnson" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <div class="doctor-specialty">Pediatrician</div>
+                        <div class="doctor-details">
+                            <p>MBBS, MD (Pediatrics)</p>
+                            <p>12+ years experience</p>
+                        </div>
+                        <div class="doctor-schedule">
+                            <h4>Consultation Hours</h4>
+                            <ul class="schedule-list">
+                                <li><span>Mon - Fri:</span> <span>10:00 AM - 6:00 PM</span></li>
+                                <li><span>Saturday:</span> <span>10:00 AM - 2:00 PM</span></li>
+                            </ul>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="action-btn book-btn">Book Appointment</a>
+                            <a href="#" class="action-btn profile-btn">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-department="Orthopedics">
+                    <img src="images/doctor3.jpg" alt="Dr. Michael Chen" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <div class="doctor-specialty">Orthopedic Surgeon</div>
+                        <div class="doctor-details">
+                            <p>MBBS, MS (Orthopedics)</p>
+                            <p>10+ years experience</p>
+                        </div>
+                        <div class="doctor-schedule">
+                            <h4>Consultation Hours</h4>
+                            <ul class="schedule-list">
+                                <li><span>Mon - Fri:</span> <span>11:00 AM - 7:00 PM</span></li>
+                                <li><span>Saturday:</span> <span>11:00 AM - 3:00 PM</span></li>
+                            </ul>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="action-btn book-btn">Book Appointment</a>
+                            <a href="#" class="action-btn profile-btn">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialization-section">
+                <h2>Our Specializations</h2>
+                <div class="specialization-grid">
+                    <div class="specialization-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Cardiology</h3>
+                        <p>Expert care for heart conditions and cardiovascular health</p>
+                    </div>
+                    <div class="specialization-item">
+                        <i class="fas fa-child"></i>
+                        <h3>Pediatrics</h3>
+                        <p>Comprehensive healthcare for children and adolescents</p>
+                    </div>
+                    <div class="specialization-item">
+                        <i class="fas fa-bone"></i>
+                        <h3>Orthopedics</h3>
+                        <p>Treatment for bone, joint, and muscle conditions</p>
+                    </div>
+                    <div class="specialization-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>Neurology</h3>
+                        <p>Advanced care for neurological disorders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add data-department attributes to doctor cards
+            const doctorCards = document.querySelectorAll('.doctor-card');
+            doctorCards[0].setAttribute('data-department', 'Cardiology');
+            doctorCards[1].setAttribute('data-department', 'Pediatrics');
+            doctorCards[2].setAttribute('data-department', 'Orthopedics');
+
+            // Department filter functionality
+            const departmentBtns = document.querySelectorAll('.department-btn');
+            
+            departmentBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    departmentBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    // Get the selected department
+                    const department = btn.textContent.trim();
+
+                    // Show/hide doctor cards based on department
+                    doctorCards.forEach(card => {
+                        if (department === 'All Departments') {
+                            card.style.display = 'block';
+                        } else {
+                            const doctorDepartment = card.getAttribute('data-department');
+                            card.style.display = doctorDepartment === department ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+
+            // Show all doctors initially
+            departmentBtns[0].click();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Services - SAI Hospital</title>
+    <meta name="description" content="24/7 Emergency medical services at SAI Hospital. Immediate care for critical conditions with experienced emergency staff.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .emergency-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .emergency-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .emergency-hero {
+            background: linear-gradient(rgba(220, 38, 38, 0.9), rgba(220, 38, 38, 0.9)),
+                        url('images/emergency-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .emergency-contact {
+            background: #dc2626;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .emergency-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .emergency-number a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            background: #f7fafc;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .service-icon i {
+            font-size: 40px;
+            color: #dc2626;
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-info h3 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .service-info p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .facilities-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .facility-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .facility-item i {
+            color: #dc2626;
+            font-size: 24px;
+        }
+
+        .ambulance-section {
+            margin-top: 60px;
+            background: #2c5282;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .ambulance-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .ambulance-feature {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .ambulance-feature i {
+            font-size: 30px;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        .emergency-steps {
+            margin-top: 60px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background: #dc2626;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .emergency-section {
+                padding: 80px 15px 20px;
+            }
+
+            .emergency-number {
+                font-size: 1.5em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Emergency Section -->
+    <section class="emergency-section">
+        <div class="emergency-content">
+            <div class="emergency-hero">
+                <h1>24/7 Emergency Services</h1>
+                <p>Immediate medical attention when you need it most</p>
+            </div>
+
+            <div class="emergency-contact">
+                <h2>Emergency Hotline</h2>
+                <div class="emergency-number">
+                    <a href="tel:8331093773">
+                        <i class="fas fa-phone-alt"></i> 0883-2472083
+                    </a>
+                </div>
+                <p>Available 24 hours a day, 7 days a week</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Cardiac Emergency</h3>
+                        <p>Immediate response for heart-related emergencies with state-of-the-art cardiac care facilities.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Stroke Care</h3>
+                        <p>Rapid assessment and treatment for stroke patients with specialized neurological care.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Trauma Care</h3>
+                        <p>Advanced trauma care for accidents and injuries with experienced trauma specialists.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facilities-section">
+                <h2>Emergency Facilities</h2>
+                <div class="facilities-grid">
+                    <div class="facility-item">
+                        <i class="fas fa-procedures"></i>
+                        <div>
+                            <h3>Emergency Beds</h3>
+                            <p>Fully equipped emergency beds with monitoring systems</p>
+                        </div>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-microscope"></i>
+                        <div>
+                            <h3>24/7 Laboratory</h3>
+                            <p>Round-the-clock diagnostic services</p>
+                        </div>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-x-ray"></i>
+                        <div>
+                            <h3>Imaging Services</h3>
+                            <p>Immediate access to X-ray, CT, and MRI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ambulance-section">
+                <h2>Ambulance Services</h2>
+                <p>Advanced life support ambulances available 24/7</p>
+                <div class="ambulance-features">
+                    <div class="ambulance-feature">
+                        <i class="fas fa-truck-medical"></i>
+                        <h3>GPS Tracking</h3>
+                        <p>Real-time location tracking</p>
+                    </div>
+                    <div class="ambulance-feature">
+                        <i class="fas fa-kit-medical"></i>
+                        <h3>Medical Equipment</h3>
+                        <p>Advanced life support systems</p>
+                    </div>
+                    <div class="ambulance-feature">
+                        <i class="fas fa-user-doctor"></i>
+                        <h3>Trained Staff</h3>
+                        <p>Expert paramedical team</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-steps">
+                <h2>What to Do in an Emergency</h2>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>Stay Calm</h3>
+                        <p>Remain calm and assess the situation carefully</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>Call Emergency</h3>
+                        <p>Dial our emergency number immediately</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>Follow Instructions</h3>
+                        <p>Listen to emergency responders' guidance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+        .hospital-icon { fill: #00875A; }
+    </style>
+    <g transform="translate(10,35)">
+        <path class="hospital-icon" d="M0,0 h-5 v-20 h-10 v20 h-5 v-30 h5 v5 h10 v-5 h5 z" transform="translate(25,-5)"/>
+        <text class="logo-text" x="35" y="0" fill="#00875A" font-size="24">SAI HOSPITAL</text>
+    </g>
+</svg>

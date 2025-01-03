@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory & CT Services - SAI Hospital</title>
+    <meta name="description" content="State-of-the-art laboratory and CT scan facilities at SAI Hospital. Advanced diagnostic services with quick and accurate results.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .lab-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .lab-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)),
+                        url('images/lab-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-info h3 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .service-info p {
+            color: #4a5568;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .features-section {
+            background: #f7fafc;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-item i {
+            color: #48bb78;
+            font-size: 24px;
+            margin-top: 3px;
+        }
+
+        .timing-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .timing-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .timing-card h4 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .timing-card p {
+            margin: 5px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .lab-section {
+                padding: 80px 15px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Laboratory Section -->
+    <section class="lab-section">
+        <div class="lab-content">
+            <div class="hero-section">
+                <h1>Laboratory & CT Services</h1>
+                <p>State-of-the-art diagnostic facilities with advanced technology and expert professionals</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="/images/laboratory-tests.webp" alt="Laboratory Tests" class="service-image">
+                    <div class="service-info">
+                        <h3>Laboratory Tests</h3>
+                        <p>Comprehensive range of diagnostic tests with quick and accurate results.</p>
+                        <ul>
+                            <li>Blood Tests</li>
+                            <li>Urine Analysis</li>
+                            <li>Biochemistry</li>
+                            <li>Microbiology</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="/images/ct-scan.webp" alt="CT Scan" class="service-image">
+                    <div class="service-info">
+                        <h3>CT Scan</h3>
+                        <p>Advanced CT scanning with minimal radiation exposure.</p>
+                        <ul>
+                            <li>Brain CT</li>
+                            <li>Chest CT</li>
+                            <li>Abdomen CT</li>
+                            <li>Contrast Studies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="/images/emergency-services.webp" alt="Emergency Services" class="service-image">
+                    <div class="service-info">
+                        <h3>Emergency Services</h3>
+                        <p>24/7 emergency laboratory and CT scan services.</p>
+                        <ul>
+                            <li>Rapid Testing</li>
+                            <li>Emergency CT Scans</li>
+                            <li>Quick Reporting</li>
+                            <li>Expert Consultation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>Our Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Quick Results</h3>
+                            <p>Fast turnaround time for test results</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-user-md"></i>
+                        <div>
+                            <h3>Expert Team</h3>
+                            <p>Qualified technicians and pathologists</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-microscope"></i>
+                        <div>
+                            <h3>Modern Equipment</h3>
+                            <p>State-of-the-art diagnostic equipment</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h3>Accredited Lab</h3>
+                            <p>Nationally accredited laboratory</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timing-section">
+                <h2>Working Hours</h2>
+                <div class="timing-grid">
+                    <div class="timing-card">
+                        <h4>Regular Hours</h4>
+                        <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
+                        <p>Sunday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                    <div class="timing-card">
+                        <h4>Emergency Services</h4>
+                        <p>24/7 Available</p>
+                        <p>Including Holidays</p>
+                    </div>
+                    <div class="timing-card">
+                        <h4>Report Collection</h4>
+                        <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
+                        <p>Online Reports Available 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

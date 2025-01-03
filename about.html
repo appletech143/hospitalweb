@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SAI Hospital</title>
+    <meta name="description" content="Learn about SAI Hospital's history, mission, vision, and our commitment to providing excellent healthcare services.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <style>
+        .about-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-card h3 {
+            color: #2c5282;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-section {
+                padding: 80px 15px 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h1>About SAI Hospital</h1>
+            <p class="lead">Providing Excellence in Healthcare Since 1995</p>
+
+            <div class="about-image">
+                <img src="images/hospital/hospital.webp" alt="SAI Hospital Building">
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide exceptional healthcare services with compassion and expertise, ensuring the well-being of our community through innovative medical solutions and personalized care.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading healthcare institution, recognized for excellence in patient care, medical innovation, and community service, setting new standards in healthcare delivery.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Excellence in Patient Care</li>
+                        <li>Integrity and Ethics</li>
+                        <li>Innovation and Research</li>
+                        <li>Compassion and Empathy</li>
+                        <li>Professional Development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-grid" style="margin-top: 40px;">
+                <div class="about-card">
+                    <h3>Our History</h3>
+                    <p>Founded in 1995, SAI Hospital has grown from a small clinic to a comprehensive healthcare facility. Over the years, we have continuously expanded our services, upgraded our facilities, and enhanced our medical expertise to meet the evolving healthcare needs of our community.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Team</h3>
+                    <p>Our medical professionals include experienced doctors, skilled nurses, and dedicated support staff. Together, we work to provide comprehensive healthcare services while maintaining the highest standards of medical excellence.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Achievements</h3>
+                    <ul>
+                        <li>JCI Accredited Hospital</li>
+                        <li>ISO 9001:2015 Certified</li>
+                        <li>Excellence in Patient Safety Award</li>
+                        <li>Best Multi-Specialty Hospital Award</li>
+                        <li>Healthcare Innovation Recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

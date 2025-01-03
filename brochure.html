@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Brochure - SAI Hospital</title>
+    <meta name="description" content="Download SAI Hospital's brochure to learn more about our facilities, services, and healthcare offerings.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .brochure-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .brochure-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .brochure-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .brochure-table th,
+        .brochure-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .brochure-table th {
+            background-color: #48bb78;
+            color: white;
+            font-weight: 500;
+        }
+
+        .brochure-table tr:hover {
+            background-color: #f7fafc;
+        }
+
+        .brochure-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .view-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #48bb78;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-right: 8px;
+        }
+
+        .view-btn:last-child {
+            margin-right: 0;
+        }
+
+        .view-btn.telugu {
+            background-color: #4299e1;
+        }
+
+        .view-btn:hover {
+            background-color: #38a169;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .view-btn.telugu:hover {
+            background-color: #3182ce;
+        }
+
+        .view-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            .brochure-section {
+                padding: 80px 15px 20px;
+            }
+
+            .brochure-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .view-actions {
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .view-btn {
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>      
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Brochure Section -->
+    <section class="brochure-section">
+        <div class="brochure-content">
+            <h1>Hospital Brochures</h1>
+            <p class="lead">View our comprehensive brochures to learn more about our facilities and services.</p>
+
+            <table class="brochure-table">
+                <thead>
+                    <tr>
+                        <th>Document Name</th>
+                        <th>Description</th>
+                        <th>Size</th>
+                        <th>Last Updated</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hospital Overview</td>
+                        <td>Complete overview of SAI Hospital facilities and services</td>
+                        <td class="file-size">2.5 MB</td>
+                        <td class="file-date">Dec 2023</td>
+                        <td class="view-actions">
+                            <a href="downloads/hospital-overview-en.pdf" class="view-btn" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                English
+                            </a>
+                            <a href="downloads/hospital-overview-te.pdf" class="view-btn telugu" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                తెలుగు
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Services Guide</td>
+                        <td>Detailed information about our medical services</td>
+                        <td class="file-size">1.8 MB</td>
+                        <td class="file-date">Dec 2023</td>
+                        <td class="view-actions">
+                            <a href="downloads/services-guide-en.pdf" class="view-btn" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                English
+                            </a>
+                            <a href="downloads/services-guide-te.pdf" class="view-btn telugu" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                తెలుగు
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Patient Guide</td>
+                        <td>Essential information for patients and visitors</td>
+                        <td class="file-size">1.5 MB</td>
+                        <td class="file-date">Dec 2023</td>
+                        <td class="view-actions">
+                            <a href="downloads/patient-guide-en.pdf" class="view-btn" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                English
+                            </a>
+                            <a href="downloads/patient-guide-te.pdf" class="view-btn telugu" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                తెలుగు
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

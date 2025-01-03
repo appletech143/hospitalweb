@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Patients - SAI Hospital</title>
+    <meta name="description" content="Comprehensive information and services for international patients at SAI Hospital.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .international-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .international-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .international-content h1 {
+            color: #2d3748;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .welcome-message h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .welcome-message p {
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5em;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #4a5568;
+        }
+
+        /* Process Section */
+        .process-section {
+            margin: 60px 0;
+        }
+
+        .process-section h2 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 40px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #48bb78;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #4a5568;
+        }
+
+        /* Insurance Section */
+        .insurance-section {
+            margin: 60px 0;
+        }
+
+        .insurance-section h2 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 30px;
+        }
+
+        .insurance-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-card i {
+            font-size: 2em;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+            color: #4a5568;
+        }
+
+        .info-card ul li {
+            margin: 10px 0;
+        }
+
+        .info-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #48bb78;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .international-section {
+                padding: 60px 15px;
+            }
+
+            .international-content {
+                padding: 20px;
+            }
+
+            .services-grid,
+            .process-steps,
+            .insurance-info {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="international-section">
+        <div class="international-content">
+            <h1>International Patients</h1>
+
+            <section class="welcome-message">
+                <h2>Welcome to SAI Hospital</h2>
+                <p>We provide world-class healthcare services to international patients, ensuring comfort and care throughout their medical journey.</p>
+            </section>
+
+            <section class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-passport"></i>
+                    <h3>Visa Assistance</h3>
+                    <p>We provide assistance with medical visa processing and documentation.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Language Support</h3>
+                    <p>Multilingual staff and interpreters available for better communication.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Accommodation</h3>
+                    <p>Assistance in finding suitable accommodation near the hospital.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-taxi"></i>
+                    <h3>Transportation</h3>
+                    <p>Airport pickup and drop service for international patients.</p>
+                </div>
+            </section>
+
+            <section class="process-section">
+                <h2>Treatment Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Initial Inquiry</h3>
+                        <p>Send your medical reports and requirements</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Medical Opinion</h3>
+                        <p>Receive detailed treatment plan and cost estimate</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Travel Planning</h3>
+                        <p>Visa and travel arrangements assistance</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Treatment</h3>
+                        <p>Receive world-class medical care</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="insurance-section">
+                <h2>Insurance & Payment</h2>
+                <div class="insurance-info">
+                    <div class="info-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Payment Options</h3>
+                        <ul>
+                            <li>International Credit Cards</li>
+                            <li>Wire Transfer</li>
+                            <li>Cash Payment</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-file-medical"></i>
+                        <h3>Insurance</h3>
+                        <p>We work with major international insurance providers. Contact our international desk for details.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2>International Patient Care</h2>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> Email: international@saihospital.com</p>
+                    <p><i class="fas fa-phone"></i> Hotline: +91 1234567890</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +91 1234567890</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Care - SAI Hospital</title>
+    <meta name="description" content="Comprehensive patient care services at SAI Hospital. Learn about our patient-centered approach, facilities, and support services.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .patient-care-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .care-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .care-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .care-card i {
+            font-size: 2.5em;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        .care-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .care-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .care-features {
+            margin-top: 60px;
+            padding: 40px;
+            background: #f7fafc;
+            border-radius: 15px;
+        }
+
+        .care-features h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2d3748;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-item i {
+            color: #48bb78;
+            font-size: 1.5em;
+            margin-top: 3px;
+        }
+
+        .feature-text h4 {
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .feature-text p {
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .contact-box {
+            background: #48bb78;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-box .phone {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .patient-care-section {
+                padding: 60px 15px;
+            }
+
+            .care-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!-- Patient Care Section -->
+    <section class="patient-care-section">
+        <h1>Patient Care at SAI Hospital</h1>
+        <p class="lead">We are committed to providing exceptional care and support throughout your healthcare journey.</p>
+
+        <div class="care-grid">
+            <div class="care-card">
+                <i class="fas fa-user-md"></i>
+                <h3>Personalized Care</h3>
+                <p>Our healthcare team develops individualized treatment plans tailored to your specific needs and conditions.</p>
+            </div>
+            <div class="care-card">
+                <i class="fas fa-procedures"></i>
+                <h3>Inpatient Services</h3>
+                <p>State-of-the-art facilities with 24/7 nursing care and monitoring for patients requiring hospitalization.</p>
+            </div>
+            <div class="care-card">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Outpatient Care</h3>
+                <p>Comprehensive outpatient services including consultations, diagnostics, and follow-up care.</p>
+            </div>
+        </div>
+
+        <div class="care-features">
+            <h2>Our Patient Care Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="feature-text">
+                        <h4>24/7 Emergency Care</h4>
+                        <p>Round-the-clock emergency services with rapid response teams.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <div class="feature-text">
+                        <h4>Multi-Disciplinary Approach</h4>
+                        <p>Coordinated care across specialties for comprehensive treatment.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <div class="feature-text">
+                        <h4>Patient Support Services</h4>
+                        <p>Dedicated support staff for patient assistance and guidance.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-medical"></i>
+                    <div class="feature-text">
+                        <h4>Electronic Health Records</h4>
+                        <p>Secure digital records for seamless healthcare coordination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Need Immediate Assistance?</h3>
+            <p>Our patient care coordinators are available 24/7</p>
+            <div class="phone">
+                <a href="tel:8331093773" style="color: white;">8331093773</a>
+            </div>
+            <div class="phone">
+                <a href="tel:08832472083" style="color: white;">0883-2472083</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

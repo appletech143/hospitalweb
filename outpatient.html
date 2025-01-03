@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpatient Services - SAI Hospital</title>
+    <meta name="description" content="Access quality outpatient care at SAI Hospital. Learn about our OPD timings, specialist consultations, and appointment booking process.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .outpatient-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .outpatient-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .schedule-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-card h3 {
+            color: #2c5282;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .schedule-card h3 i {
+            margin-right: 10px;
+            color: #48bb78;
+        }
+
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .schedule-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .schedule-list li:last-child {
+            border-bottom: none;
+        }
+
+        .appointment-section {
+            margin-top: 50px;
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #48bb78;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #38a169;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card i {
+            font-size: 24px;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .outpatient-section {
+                padding: 80px 15px 20px;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!-- Outpatient Section -->
+    <section class="outpatient-section">
+        <div class="outpatient-content">
+            <h1>Outpatient Services</h1>
+            <p class="lead">Access quality healthcare through our comprehensive outpatient services with experienced specialists.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Extended Hours</h3>
+                    <p>We offer extended OPD hours to accommodate your schedule</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Expert Specialists</h3>
+                    <p>Consultation with experienced healthcare professionals</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Easy Appointments</h3>
+                    <p>Book appointments online or through phone</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-file-medical"></i>
+                    <h3>Digital Records</h3>
+                    <p>Access to digital health records and test results</p>
+                </div>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <h3><i class="fas fa-stethoscope"></i>General Medicine</h3>
+                    <ul class="schedule-list">
+                        <li><span>Monday - Friday</span><span>9:00 AM - 5:00 PM</span></li>
+                        <li><span>Saturday</span><span>9:00 AM - 2:00 PM</span></li>
+                        <li><span>Sunday</span><span>Emergency Only</span></li>
+                    </ul>
+                </div>
+
+                <div class="schedule-card">
+                    <h3><i class="fas fa-heartbeat"></i>Cardiology</h3>
+                    <ul class="schedule-list">
+                        <li><span>Monday - Friday</span><span>10:00 AM - 4:00 PM</span></li>
+                        <li><span>Saturday</span><span>10:00 AM - 2:00 PM</span></li>
+                        <li><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+
+                <div class="schedule-card">
+                    <h3><i class="fas fa-bone"></i>Orthopedics</h3>
+                    <ul class="schedule-list">
+                        <li><span>Monday - Friday</span><span>9:00 AM - 4:00 PM</span></li>
+                        <li><span>Saturday</span><span>9:00 AM - 1:00 PM</span></li>
+                        <li><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="appointment-section">
+                <h2>Book an Appointment</h2>
+                <p>Schedule your consultation with our specialists. Choose from online consultation or in-person visit.</p>
+                <a href="contact.html" class="cta-button">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

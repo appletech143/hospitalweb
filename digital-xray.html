@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital X-Ray Services - SAI Hospital</title>
+    <meta name="description" content="Advanced digital X-ray services at SAI Hospital. High-quality diagnostic imaging with minimal radiation exposure.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .xray-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .xray-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)),
+                        url('images/xray-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 40px;
+            color: #48bb78;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            color: #2c5282;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .services-section {
+            margin-top: 40px;
+            padding: 40px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-item h4 {
+            color: #2c5282;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-item h4 i {
+            margin-right: 10px;
+            color: #48bb78;
+        }
+
+        .service-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-item ul li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-item ul li:before {
+            content: "•";
+            color: #48bb78;
+            position: absolute;
+            left: 0;
+        }
+
+        .tech-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .tech-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tech-feature {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-feature i {
+            font-size: 30px;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .xray-section {
+                padding: 80px 15px 20px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- X-Ray Section -->
+    <section class="xray-section">
+        <div class="xray-content">
+            <div class="hero-section">
+                <h1>Digital X-Ray Services</h1>
+                <p>Advanced digital radiography with superior image quality and reduced radiation exposure</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick Results</h3>
+                    <p>Immediate image availability with digital processing</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-radiation"></i>
+                    <h3>Low Radiation</h3>
+                    <p>Reduced radiation exposure compared to traditional X-rays</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Superior Quality</h3>
+                    <p>High-resolution images with better diagnostic accuracy</p>
+                </div>
+            </div>
+
+            <div class="services-section">
+                <h2>Our X-Ray Services</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h4><i class="fas fa-bone"></i>Skeletal X-rays</h4>
+                        <ul>
+                            <li>Skull X-ray</li>
+                            <li>Spine X-ray</li>
+                            <li>Joint X-rays</li>
+                            <li>Extremity X-rays</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h4><i class="fas fa-lungs"></i>Chest X-rays</h4>
+                        <ul>
+                            <li>Routine chest X-ray</li>
+                            <li>Cardiac evaluation</li>
+                            <li>Lung assessment</li>
+                            <li>Emergency chest X-ray</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h4><i class="fas fa-tooth"></i>Dental X-rays</h4>
+                        <ul>
+                            <li>Panoramic X-ray</li>
+                            <li>Bite-wing X-rays</li>
+                            <li>Periapical X-rays</li>
+                            <li>Orthodontic assessment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h2>Our Technology</h2>
+                <div class="tech-features">
+                    <div class="tech-feature">
+                        <i class="fas fa-digital-tachograph"></i>
+                        <h3>Digital Processing</h3>
+                        <p>Advanced image processing for optimal clarity</p>
+                    </div>
+                    <div class="tech-feature">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Cloud Storage</h3>
+                        <p>Secure digital storage with easy access</p>
+                    </div>
+                    <div class="tech-feature">
+                        <i class="fas fa-laptop-medical"></i>
+                        <h3>PACS Integration</h3>
+                        <p>Integrated with hospital information system</p>
+                    </div>
+                    <div class="tech-feature">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Easy Sharing</h3>
+                        <p>Digital sharing with referring doctors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

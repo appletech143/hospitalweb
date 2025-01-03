@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - SAI Hospital</title>
+    <meta name="description" content="Join our team at SAI Hospital. Explore career opportunities in healthcare and make a difference in people's lives.">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <style>
+        .careers-section {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+
+        .careers-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)),
+                        url('images/careers-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .job-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .job-title {
+            color: #2c5282;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .job-type {
+            background: #48bb78;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .job-details {
+            margin: 15px 0;
+            color: #4a5568;
+        }
+
+        .job-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-details ul li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .job-details ul li:before {
+            content: "•";
+            color: #48bb78;
+            position: absolute;
+            left: 0;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2c5282;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .apply-btn:hover {
+            background: #1a365d;
+        }
+
+        .benefits-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-item i {
+            font-size: 40px;
+            color: #48bb78;
+            margin-bottom: 15px;
+        }
+
+        .application-process {
+            margin-top: 60px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #48bb78;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .careers-section {
+                padding: 80px 15px 20px;
+            }
+
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/logo.png" alt="SAI Hospital Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="laboratory.html">Laboratory & CT</a>
+                    <a href="digital-xray.html">Digital X-Ray</a>
+                    <a href="emergency.html">Emergency Services</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="brochure.html">Brochures</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle">Facilities <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                    <a href="facilities-overview.html">Overview</a>
+                    <a href="patient-info.html">Patient Information</a>
+                    <a href="visitors.html">Visitors Guide</a>
+                    <a href="international-patients.html">International Patients</a>
+                    <a href="outpatient.html">Outpatient</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="phone-numbers">
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8331093773">8331093773</a>
+                </div>
+                <div class="phone-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:08832472083">0883-2472083</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Careers Section -->
+    <section class="careers-section">
+        <div class="careers-content">
+            <div class="hero-section">
+                <h1>Join Our Team</h1>
+                <p>Build your career with us and make a difference in healthcare</p>
+            </div>
+
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="job-title">
+                        <h3>Senior Medical Officer</h3>
+                        <span class="job-type">Full-time</span>
+                    </div>
+                    <div class="job-details">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>MBBS with 5+ years experience</li>
+                            <li>Valid medical license</li>
+                            <li>Strong diagnostic skills</li>
+                            <li>Excellent communication abilities</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-title">
+                        <h3>Staff Nurse</h3>
+                        <span class="job-type">Full-time</span>
+                    </div>
+                    <div class="job-details">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>BSc Nursing</li>
+                            <li>2+ years experience</li>
+                            <li>BLS certification</li>
+                            <li>Strong patient care skills</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-title">
+                        <h3>Lab Technician</h3>
+                        <span class="job-type">Full-time</span>
+                    </div>
+                    <div class="job-details">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>DMLT or equivalent</li>
+                            <li>3+ years experience</li>
+                            <li>Knowledge of lab equipment</li>
+                            <li>Computer proficiency</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h2>Why Join Us?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Health Benefits</h3>
+                        <p>Comprehensive medical coverage for you and your family</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Learning & Development</h3>
+                        <p>Continuous professional development opportunities</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-coins"></i>
+                        <h3>Competitive Pay</h3>
+                        <p>Attractive salary package with performance bonuses</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Great Culture</h3>
+                        <p>Supportive work environment and team culture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-process">
+                <h2>Application Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Apply Online</h3>
+                        <p>Submit your application through our careers portal</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Initial Screening</h3>
+                        <p>Review of qualifications and experience</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Interview</h3>
+                        <p>Technical and cultural fit assessment</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Offer Letter</h3>
+                        <p>Job offer and onboarding process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SAI HOSPITAL</h3>
+                <p>Providing quality healthcare services since 1990.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> D.NO 12-11-97,ARYAPURAM MIDDLE STREET, NEAR GOKAVARAM BUS STAND, RAJAHMUNDRY,PIN CODE 533104</p>
+                    <div class="footer-phones">
+                        <p><i class="fas fa-phone"></i> <a href="tel:8331093773">8331093773</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:08832472083">0883-2472083</a></p>
+                    </div>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@saihospitals.com">info@saihospitals.com</a></p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="laboratory.html">Laboratory & CT</a></li>
+                    <li><a href="digital-xray.html">Digital X-Ray</a></li>
+                    <li><a href="emergency.html">Emergency Services</a></li>
+                    <li><a href="outpatient.html">Outpatient Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/saihospital" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footer-timing">
+                    <h4>Working Hours</h4>
+                    <p><i class="far fa-clock"></i> 24/7 Emergency Services</p>
+                    <p><i class="far fa-clock"></i> OPD: 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> SAI HOSPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
